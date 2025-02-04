@@ -1,0 +1,48 @@
+import pandas as pd
+import requests
+import time
+
+input_file_path = 'DIRECCIONES.csv'  # Cambia con la ruta de tu archivo
+output_file_path = 'output_file_with_coordinates.xlsx'
+
+# Tu clave API de Google Maps
+api_key = 'Tu API Key'  # Reemplaza con tu clave de Google
+
+# Función para obtener coordenadas con Google Maps API
+def get_coordinates(address):
+    url = f"https://maps.googleapis.com/maps/api/geocode/json"
+    params = {
+        'address': f"{address}, Valledupar, Cesar, Colombia",
+        'key': api_key
+    }
+    response = requests.get(url, params=params)
+    
+    # Si la solicitud es exitosa, obtener latitud y longitud
+    if response.status_code == 200:
+        data = response.json()
+        if data['results']:
+            location = data['results'][0]['geometry']['location']
+            return location['lat'], location['lng']
+    else:
+        print(f"Error: {response.status_code} - {response.text}")
+    return None, None
+
+# Leer datos y agregar columnas para latitud y longitud
+data = pd.read_csv(input_file_path, delimiter=',', usecols=[0, 1, 2])
+
+
+
+data['Latitud'] = None
+data['Longitud'] = None
+
+# Obtener coordenadas para cada dirección en Valledupar
+for i, row in data.iterrows():
+    address = row['DIRECCION']  # Cambia 'DIRECCION' si el nombre de columna es diferente
+    lat, lng = get_coordinates(address)
+    data.at[i, 'Latitud'] = lat
+    data.at[i, 'Longitud'] = lng
+    time.sleep(1)  # Pausa para respetar el límite de la API
+
+# Guardar el archivo con coordenadas
+data.to_excel(output_file_path, index=False)
+print(f"Archivo actualizado con coordenadas guardado como '{output_file_path}'")
