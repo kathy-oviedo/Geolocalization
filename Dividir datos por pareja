@@ -1,0 +1,20 @@
+import pandas as pd
+
+# Cargar el archivo Excel con los datos
+file_path = 'Comercios para noviembre 29.xlsx'  # Cambia esto por el nombre del archivo de datos
+data = pd.read_excel(file_path)
+
+# Obtener la lista de tipos únicos de pareja en el dataset
+parejas_unicas = data['Grupo'].unique()
+
+# Crear un archivo Excel separado para cada tipo de pareja
+for pareja in parejas_unicas:
+    # Filtrar el dataset por cada tipo de pareja
+    data_pareja = data[data['Grupo'] == pareja]
+    
+    # Crear un nombre de archivo para cada pareja
+    output_file_path = f'datos_pareja_{pareja}.xlsx'
+    
+    # Guardar los datos filtrados en un nuevo archivo Excel
+    data_pareja.to_excel(output_file_path, index=False)
+    print(f"Archivo creado para {pareja}: {output_file_path}")
