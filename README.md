@@ -3,7 +3,7 @@ Repositorio de herramientas y scripts para geolocalización de direcciones en Va
 
 # Proyecto de Geolocalización
 
-Este repositorio contiene herramientas y scripts para la geolocalización y clustering de direcciones en **Valledupar, Cesar, Colombia**.
+Este repositorio contiene herramientas y scripts para la geolocalización y clustering de direcciones en **Valledupar, Cesar, Colombia**. Este proyecto tiene como objetivo proporcionar herramientas para geolocalizar direcciones en Valledupar, Cesar, Colombia, facilitando el análisis espacial y la toma de decisiones basadas en ubicación.
 
 ## Características:
 - Obtención de coordenadas de direcciones.
