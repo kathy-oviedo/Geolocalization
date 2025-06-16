@@ -21,11 +21,15 @@ Facilitar el análisis espacial de direcciones comerciales mediante:
 - Cuenta de Google con acceso a la API de Geocoding.
 - Datos en formato `.csv` o `.xlsx` con columnas de direcciones.
 
+---
+
 ### 📦 Librerías necesarias
 
 ```bash
 pip install pandas scikit-learn numpy folium openpyxl requests
 ```
+
+---
 
 ### 🧭 Estructura del Proyecto
 
@@ -37,6 +41,8 @@ pip install pandas scikit-learn numpy folium openpyxl requests
 | `dividir_por_pareja.py`             | Genera archivos Excel separados para cada grupo asignado.                            |
 | `DIRECCIONES.csv`                   | Archivo de entrada con direcciones a geolocalizar (no incluido por privacidad).      |
 
+---
+
 ### 🧪 Ejecución
 
 1. Geolocalización:
@@ -46,6 +52,8 @@ Usa clusterizacion_direcciones.ipynb para agrupar direcciones por cercanía y vi
 3. Exportación por grupo:
 Ejecuta dividir_por_pareja.py para generar un archivo por cada grupo creado.
 
+---
+
 ### 📍 Consideraciones
 Las direcciones deben estar localizadas en Valledupar, Cesar, Colombia.
 
@@ -53,8 +61,12 @@ Se recomienda usar direcciones verificadas de bases como Cámara de Comercio.
 
 La API de Google tiene límites gratuitos diarios. Se aplica una espera de 1 segundo entre llamadas para evitar bloqueos.
 
+---
+
 ### 📊 Visualización
 El script genera mapas interactivos en Jupyter Notebook, donde cada grupo se representa con un color distinto para facilitar la interpretación geográfica de los resultados.
+
+---
 
 ### 💡 Uso Sugerido
 Este proyecto puede ser utilizado para:
@@ -65,11 +77,15 @@ Este proyecto puede ser utilizado para:
 
 * Apoyar análisis de concentración de comercio o informalidad.
 
+---
+
 ### 👩‍💻 Autor
 Katheryn Sofía Oviedo Castañeda
 Contadora Pública | MSc. en Analítica Aplicada | Apasionada por el análisis geoespacial y la automatización de procesos públicos
 
+---
+
 ### 📄 Licencia
 Uso interno o académico. No usar con fines comerciales sin autorización previa.
 
-
+---
