@@ -25,7 +25,7 @@ Facilitar el análisis espacial de direcciones comerciales mediante:
 
 ```bash
 pip install pandas scikit-learn numpy folium openpyxl requests
-
+```
 
 ### 🧭 Estructura del Proyecto
 
