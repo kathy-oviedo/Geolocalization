@@ -1,30 +1,76 @@
-# Geolocalization
-Repositorio de herramientas y scripts para geolocalización de direcciones en Valledupar, Cesar, Colombia.
+# 🗺️ Geolocalización de Direcciones en Valledupar, Colombia
 
-# Proyecto de Geolocalización
+Este repositorio contiene una serie de herramientas en Python para geolocalizar direcciones comerciales en Valledupar (Cesar, Colombia), agruparlas por cercanía geográfica y visualizar los resultados sobre mapas interactivos.
 
-Este repositorio contiene herramientas y scripts para la geolocalización y clustering de direcciones en **Valledupar, Cesar, Colombia**. Este proyecto tiene como objetivo proporcionar herramientas para geolocalizar direcciones en Valledupar, Cesar, Colombia, facilitando el análisis espacial y la toma de decisiones basadas en ubicación.
+---
 
-## Características:
-- Obtención de coordenadas de direcciones.
-- Agrupación de puntos mediante clustering.
+## 📌 Objetivo
 
-## Instalación
-Clona el repositorio y ejecuta los códigos:
+Facilitar el análisis espacial de direcciones comerciales mediante:
 
-Datos necesarios para llevar a cabo la geolocalización:
+- Geolocalización automática usando la API de Google Maps.
+- Agrupación de puntos mediante **clustering jerárquico** (Agglomerative Clustering).
+- Visualización de resultados en mapas interactivos con **Folium**.
+- Generación de archivos Excel por grupo para distribución operativa.
 
-1. Base de datos interna de la entidad con información de NITs y direcciones de los comercios.
-2. Base de datos de camara de comercio con información de NITS y direcciones comerciales (para cruces de direcciones).
-3. Cuenta de Google para acceder a las APIs.
+---
 
-Empezamos por sacar las direcciones de la base de datos de camara de comercio para mas fiabilidad en las ubicaciones.
+## ⚙️ Requisitos
 
-Luego de ello procedemos a ejecutar un código para geolocalizar con ayuda de la API de Google las direcciones en el mapa, extrayendo las coordenadas de las direcciones de los establecimientos:
-...
+- Python 3.8+
+- Cuenta de Google con acceso a la API de Geocoding.
+- Datos en formato `.csv` o `.xlsx` con columnas de direcciones.
 
-..
+### 📦 Librerías necesarias
 
-.
+```bash
+pip install pandas scikit-learn numpy folium openpyxl requests
+
+
+### 🧭 Estructura del Proyecto
+
+
+| Archivo / Carpeta                   | Descripción                                                                          |
+| ----------------------------------- | ------------------------------------------------------------------------------------ |
+| `geolocalizacion_google_maps.ipynb` | Extrae coordenadas (latitud y longitud) de direcciones usando la API de Google Maps. |
+| `clusterizacion_direcciones.ipynb`  | Agrupa las direcciones por proximidad usando clustering jerárquico y genera mapas.   |
+| `dividir_por_pareja.py`             | Genera archivos Excel separados para cada grupo asignado.                            |
+| `DIRECCIONES.csv`                   | Archivo de entrada con direcciones a geolocalizar (no incluido por privacidad).      |
+
+### 🧪 Ejecución
+1. Geolocalización:
+Ejecuta geolocalizacion_google_maps.ipynb para obtener las coordenadas de tus direcciones.
+
+2. Clustering:
+Usa clusterizacion_direcciones.ipynb para agrupar direcciones por cercanía y visualizar los grupos en un mapa.
+
+3. Exportación por grupo:
+Ejecuta dividir_por_pareja.py para generar un archivo por cada grupo creado.
+
+### 📍 Consideraciones
+Las direcciones deben estar localizadas en Valledupar, Cesar, Colombia.
+
+Se recomienda usar direcciones verificadas de bases como Cámara de Comercio.
+
+La API de Google tiene límites gratuitos diarios. Se aplica una espera de 1 segundo entre llamadas para evitar bloqueos.
+
+### 📊 Visualización
+El script genera mapas interactivos en Jupyter Notebook, donde cada grupo se representa con un color distinto para facilitar la interpretación geográfica de los resultados.
+
+###💡 Uso Sugerido
+Este proyecto puede ser utilizado para:
+
+* Optimizar rutas de visitas o inspecciones.
+
+* Organizar operativos de control territorial.
+
+* Apoyar análisis de concentración de comercio o informalidad.
+
+### 👩‍💻 Autor
+Katheryn Sofía Oviedo Castañeda
+Contadora Pública | MSc. en Analítica Aplicada | Apasionada por el análisis geoespacial y la automatización de procesos públicos
+
+### 📄 Licencia
+Uso interno o académico. No usar con fines comerciales sin autorización previa.
 
 
