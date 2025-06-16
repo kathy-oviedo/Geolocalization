@@ -23,7 +23,7 @@ Facilitar el análisis espacial de direcciones comerciales mediante:
 
 ---
 
-### 📦 Librerías necesarias
+## 📦 Librerías necesarias
 
 ```bash
 pip install pandas scikit-learn numpy folium openpyxl requests
@@ -31,7 +31,7 @@ pip install pandas scikit-learn numpy folium openpyxl requests
 
 ---
 
-### 🧭 Estructura del Proyecto
+## 🧭 Estructura del Proyecto
 
 
 | Archivo / Carpeta                   | Descripción                                                                          |
@@ -43,7 +43,7 @@ pip install pandas scikit-learn numpy folium openpyxl requests
 
 ---
 
-### 🧪 Ejecución
+## 🧪 Ejecución
 
 1. Geolocalización:
 Ejecuta geolocalizacion_google_maps.ipynb para obtener las coordenadas de tus direcciones.
@@ -54,7 +54,7 @@ Ejecuta dividir_por_pareja.py para generar un archivo por cada grupo creado.
 
 ---
 
-### 📍 Consideraciones
+## 📍 Consideraciones
 Las direcciones deben estar localizadas en Valledupar, Cesar, Colombia.
 
 Se recomienda usar direcciones verificadas de bases como Cámara de Comercio.
@@ -63,12 +63,12 @@ La API de Google tiene límites gratuitos diarios. Se aplica una espera de 1 seg
 
 ---
 
-### 📊 Visualización
+## 📊 Visualización
 El script genera mapas interactivos en Jupyter Notebook, donde cada grupo se representa con un color distinto para facilitar la interpretación geográfica de los resultados.
 
 ---
 
-### 💡 Uso Sugerido
+## 💡 Uso Sugerido
 Este proyecto puede ser utilizado para:
 
 * Optimizar rutas de visitas o inspecciones.
@@ -79,7 +79,7 @@ Este proyecto puede ser utilizado para:
 
 ---
 
-### 👩‍💻 Autor
+## 👩‍💻 Autor
 Katheryn Sofía Oviedo Castañeda
 Contadora Pública | MSc. en Analítica Aplicada | Apasionada por el análisis geoespacial y la automatización de procesos públicos
 
