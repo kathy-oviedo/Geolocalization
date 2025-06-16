@@ -38,12 +38,11 @@ pip install pandas scikit-learn numpy folium openpyxl requests
 | `DIRECCIONES.csv`                   | Archivo de entrada con direcciones a geolocalizar (no incluido por privacidad).      |
 
 ### 🧪 Ejecución
+
 1. Geolocalización:
 Ejecuta geolocalizacion_google_maps.ipynb para obtener las coordenadas de tus direcciones.
-
 2. Clustering:
 Usa clusterizacion_direcciones.ipynb para agrupar direcciones por cercanía y visualizar los grupos en un mapa.
-
 3. Exportación por grupo:
 Ejecuta dividir_por_pareja.py para generar un archivo por cada grupo creado.
 
@@ -57,7 +56,7 @@ La API de Google tiene límites gratuitos diarios. Se aplica una espera de 1 seg
 ### 📊 Visualización
 El script genera mapas interactivos en Jupyter Notebook, donde cada grupo se representa con un color distinto para facilitar la interpretación geográfica de los resultados.
 
-###💡 Uso Sugerido
+### 💡 Uso Sugerido
 Este proyecto puede ser utilizado para:
 
 * Optimizar rutas de visitas o inspecciones.
